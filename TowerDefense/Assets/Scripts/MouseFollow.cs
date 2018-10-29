@@ -1,29 +1,52 @@
 ﻿using UnityEngine;
 
 
-public class MouseFollow : MonoBehaviour
+public class MouseFollow : SelectItem
 {
 
     public Camera myCam;
 
-    private float xPos;
-    private float zPos;
+    private int xPos;
+    private int zPos;
 
-    public Transform item1;
+    public GameObject ItemOnMouse;
 
-    void Update()
+
+    public override void Start()
     {
+        base.Start();
+    }
+
+    public override void Update()
+    {
+        base.Update();
         RaycastHit vHit = new RaycastHit();
         Ray vRay = myCam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(vRay, out vHit, 1000))
         {
-            xPos = Mathf.Round(vHit.point.x);
-            zPos = Mathf.Round(vHit.point.z);
 
-            item1.transform.position = new Vector3(xPos, 0.5f, zPos);
+            ItemOnMouse = GameObject.Find("ItemOnMouse");
+
+            xPos = Mathf.RoundToInt(vHit.point.x);
+            zPos = Mathf.RoundToInt(vHit.point.z);
+            
+            if(ItemOnMouse)
+            {
+              ItemOnMouse.transform.position = new Vector3(xPos, 0.5f, zPos);
+            }
         }
 
         
 
+    }
+
+    public int GetMousePosX()
+    {
+        return xPos;
+    }
+
+    public int GetMousePosZ()
+    {
+        return zPos;
     }
 }

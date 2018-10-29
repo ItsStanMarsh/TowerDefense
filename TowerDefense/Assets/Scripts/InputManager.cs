@@ -6,7 +6,7 @@ public class InputManager : MonoBehaviour {
 
     public string[] keys;
 
-    public void Start()
+    public virtual void Start()
     {
         keys = new string[1];      
     }
@@ -17,6 +17,13 @@ public class InputManager : MonoBehaviour {
         {
             keys[0] = "Click";
         }
-        
+        if(Input.GetKeyDown("1"))
+        {
+            keys[0] = "Item1";
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            keys[0] = "Item2";
+        }
     }
 }

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridSystem : MonoBehaviour
+public class GridSystem : MouseFollow
 {
     public int[,] grid;
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         grid = new int[9, 3];
 
         for(int x = 0; x < 9; x++)
@@ -19,9 +20,8 @@ public class GridSystem : MonoBehaviour
         }
     }
 
-    public int FillArray(int x, int y)
+    public void FillArray(int x, int y, int FillType)
     {
-        grid[x, y] = 0;
-        return 0;
+        grid[x, y] = FillType;
     }
 }
