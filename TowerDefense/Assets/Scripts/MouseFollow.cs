@@ -29,14 +29,14 @@ public class MouseFollow : SelectItem
 
             xPos = Mathf.RoundToInt(vHit.point.x);
             zPos = Mathf.RoundToInt(vHit.point.z);
-            
-            if(ItemOnMouse)
+
+            if (ItemOnMouse)
             {
-              ItemOnMouse.transform.position = new Vector3(xPos, 0.5f, zPos);
+                ItemOnMouse.transform.position = new Vector3(xPos, 0.5f, zPos);
             }
         }
 
-        
+
 
     }
 

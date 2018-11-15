@@ -14,7 +14,7 @@ public class SelectItem : InputManager
     public override void Update()
     {
         base.Update();
-        if(keys[0] == "Item1")
+        if (keys[0] == "Item1")
         {
             SetItem(Resources.Load("Prefabs/Item1") as GameObject);
             ShowSelectedItem();
@@ -27,13 +27,13 @@ public class SelectItem : InputManager
             keys[0] = "";
         }
     }
-    
+
     public void ShowSelectedItem()
     {
         Destroy(GameObject.Find("ItemOnMouse"));
-        var InstItem = Instantiate(GetItem(), new Vector3(0,10,0), Quaternion.identity);
+        var InstItem = Instantiate(GetItem(), new Vector3(0, 10, 0), Quaternion.identity);
         InstItem.name = "ItemOnMouse";
-        
+
     }
 
     public void SetItem(GameObject item)
