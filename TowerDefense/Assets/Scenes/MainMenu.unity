@@ -402,7 +402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1901, y: 0}
+  m_AnchoredPosition: {x: 1691, y: 0}
   m_SizeDelta: {x: 1910.5, y: 1079.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273629713
@@ -566,6 +566,75 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 425716760}
+  m_CullTransparentMesh: 0
+--- !u!1 &513053566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513053567}
+  - component: {fileID: 513053569}
+  - component: {fileID: 513053568}
+  m_Layer: 5
+  m_Name: Image (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &513053567
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513053566}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1264781860}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3263, y: 0}
+  m_SizeDelta: {x: 1910.5, y: 1079.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &513053568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513053566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: ad3023f0177b0e94faa73e1fbc9e2a35, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &513053569
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513053566}
   m_CullTransparentMesh: 0
 --- !u!1 &629750158
 GameObject:
@@ -781,7 +850,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 732097928}
-        m_MethodName: Switch
+        m_MethodName: startGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -914,6 +983,7 @@ RectTransform:
   m_Children:
   - {fileID: 1522449093}
   - {fileID: 273629712}
+  - {fileID: 513053567}
   m_Father: {fileID: 87061587}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1100,7 +1170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -0}
+  m_AnchoredPosition: {x: -215, y: 0}
   m_SizeDelta: {x: 1910.5, y: 1079.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522449094
@@ -1170,7 +1240,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1245,8 +1315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 2020204995}
   SoundList:
-  - name: vermillion
-    clip: {fileID: 8300000, guid: fe9d5b64d9c743c4d8822fa32d1f9156, type: 3}
+  - name: cheat codes
+    clip: {fileID: 8300000, guid: 2de65953c3c87df428fea25e5d2fe67a, type: 3}
   - name: feel good
     clip: {fileID: 8300000, guid: 29de1a58b7f5fa74da799b087457dcec, type: 3}
   - name: not alone
@@ -1257,6 +1327,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 95c30e5d033076947b6d9c8237c768c4, type: 3}
   - name: better life
     clip: {fileID: 8300000, guid: 1bf19aecf889fa143bd442b59cdc257c, type: 3}
+  - name: vermilion
+    clip: {fileID: 8300000, guid: fe9d5b64d9c743c4d8822fa32d1f9156, type: 3}
 --- !u!114 &2020204994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1353,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
